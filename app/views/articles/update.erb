@@ -1,0 +1,11 @@
+<p>You're editing <%=@a.title%>,
+Contents:
+<%=@a.content%>
+</p>
+
+<form action="/articles/<%=@a.id%>" method="POST">
+<input type="hidden" value="PATCH" name="_method"/>
+<input type="text" value="<%=@a.title%>" name="article[title]" id="title"/>
+<input type="text" value="<%=@a.content%>" name="article[content]" id="content"/>
+<input type="submit" value="Update <%=@a.title%>"/>
+</form>
